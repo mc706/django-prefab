@@ -1,0 +1,135 @@
+{
+  "project_name": "test_project",
+  //used to run startproject
+  "django_version": "",
+  "dependencies": [
+    //for requirements.txt and INSTALLED_APPS
+    {
+      "name": "django-bower",
+      "version": "",
+      //leave blank for latests
+      "installed": true
+    }
+  ],
+  "config": {
+    "settings": {
+      "debug": true,
+      "database": {
+        "default": {
+          "ENGINE": "django.db.backends.mysql",
+          "NAME": "database_name",
+          "USER": "username",
+          "PASSWORD": "password"
+        }
+      },
+      "static": {
+      }
+    },
+    "urls": {
+      "imports": [
+        ""
+      ],
+      "urls": [
+        ""
+      ]
+    }
+  },
+  "apps": [
+    {
+      "name": "other",
+      "installed": true,
+      "models": {
+        "use": true,
+        "imports": [
+          "from django.contrib.auth.models import User"
+        ],
+        "models": [
+          {
+            "name": "Ticket",
+            "extends": "",
+            //leave blank for models.Model
+            "docstring": "",
+            "fields": [
+              {
+                "name": "title",
+                "field_type": "Charfield",
+                "field_options": {
+                  "max_length": "64",
+                  "blank": true,
+                  "null": true
+                }
+              }
+            ],
+            "meta": {
+              "verbose_name": ''
+            }
+          }
+        ]
+      },
+      "forms": {
+        "use": true
+      },
+      "admin": {
+        "use": true
+      },
+      "urls": {
+        "use": true
+      },
+      "views": {
+        "use": true
+      },
+      "fixtures": {
+      },
+      "templates": [
+      ]
+    }
+  ],
+  "environment": {
+    "use_virtual_env": true,
+    "version_control": {
+      "git": {
+        "use": true,
+        "gitignore_templates": [
+          //uses gitignore.io
+          "pycharm",
+          "python",
+          "vagrant"
+        ],
+        "github": {
+          "repo_url": "",
+          "description": "",
+          "private": false
+        },
+        "gitflow": {
+          "use": true
+          //installs gitflow as dependency
+          //runs git flow init -d
+        }
+      },
+      "hg": {
+        "use": false
+        //TODO: mercurial and bitbucket support
+      }
+    },
+    "fabric": {
+      "use": true
+      //installs fabric into requirements and adds
+    },
+    "vagrant": {
+      "use": true,
+      "server_port": "8080",
+      "vagrant_box": "ubuntu/trusty64"
+
+      //initializes vagrant file and bootstrap
+    },
+    "coverage": {
+      "use": true
+      //installs coverage
+    }
+  },
+  "project_files": {
+    "readme": true,
+    "licence": "MIT"
+    //fetches license from license server
+  }
+}
