@@ -1,7 +1,7 @@
 from setuptools import setup
 
 import re
-VERSIONFILE="pymailinator/_version.py"
+VERSIONFILE="prefabricate/_version.py"
 verstrline = open(VERSIONFILE, "rt").read()
 VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
 mo = re.search(VSRE, verstrline, re.M)
@@ -13,7 +13,7 @@ else:
     raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE,))
 # Setup
 setup(
-    name='py-mailinator',
+    name='django-prefab',
     version=verstr,
     url='https://github.com/mc706/django-prefab',
     author='Ryan McDevitt',

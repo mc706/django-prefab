@@ -25,3 +25,11 @@ Prefab uses some common third party development tools
 * fabric
 * pip
 * virtualenv
+
+##Installation
+`pip install django-prefab`
+
+##Usage
+`prefabricate <config_json_file>`
+
+##Options
