@@ -1,0 +1,3 @@
+class ProjectNameRequired(Exception):
+    pass
+

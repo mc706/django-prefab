@@ -61,7 +61,7 @@
               }
             ],
             "meta": {
-              "verbose_name": ''
+              "verbose_name": ""
             }
           }
         ]
@@ -85,7 +85,11 @@
     }
   ],
   "environment": {
-    "use_virtual_env": true,
+    "virtualenv": {
+      "use": true,
+      "name": ""
+      //default to project name
+    },
     "version_control": {
       "git": {
         "use": true,
